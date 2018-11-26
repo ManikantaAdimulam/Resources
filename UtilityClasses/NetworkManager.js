@@ -39,11 +39,11 @@ export const setAccessToken = (headers) => {
   let accessToken = ''
   let refreshAccessToken = ''
   if (
-    headers['x-access-wash-token'] !== undefined &&
-    headers['x-refresh-wash-token'] !== undefined
+    headers['x-access-token'] !== undefined &&
+    headers['x-refresh-token'] !== undefined
   ) {
-    AsyncStorage.setItem('AccessToken', headers['x-access-wash-token'])
-    AsyncStorage.setItem('RefreshAccessToken', headers['x-refresh-wash-token'])
+    AsyncStorage.setItem('AccessToken', headers['x-access-token'])
+    AsyncStorage.setItem('RefreshAccessToken', headers['x-refresh-token'])
   }
 
   getAccessToken('AccessToken').then((response) => {
@@ -53,8 +53,8 @@ export const setAccessToken = (headers) => {
     refreshAccessToken = response
     baseApi.setHeaders({
       'Content-Type': 'application/json',
-      'x-access-wash-token': accessToken,
-      'x-refresh-wash-token': refreshAccessToken
+      'x-access-token': accessToken,
+      'x-refresh-token': refreshAccessToken
     })
     return true
   })
