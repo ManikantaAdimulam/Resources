@@ -1,0 +1,208 @@
+toc:
+  - name: 'Constant'
+    description: 'Common messages and theme.'
+    children:
+      - Constants
+      - Messages
+
+  - name: 'Database'
+    description: 'Offline data storage and syncing.'
+    children:
+      - BackgroundDataSyncing
+      - DataBase
+
+  - name: 'Login'
+    description: 'User login.'
+    children:
+      - Login
+      - LoginViewModal
+
+  - name: 'Forgot password'
+    description: 'User can request for password.'
+    children:
+      - ForgotPassword
+
+  - name: 'Dashboard'
+    description: 'User can access respective all modules.'
+    children:
+      - DashBoard
+
+  - name: 'Coin Collection'
+    description: 'Coin collector can add machine reading, scan and add new machine and slip, complete slips.'
+    children:
+      - name: 'AddNewMachine'
+        children:
+          - AddNewMachine
+          - name: 'QRScan'
+            children:
+              - QRScan
+          - name: 'AddNewMachine View'
+            children:
+              - RadioButton
+      - AddNewSlip
+      - name: 'AddRoute'
+        children:
+          - AddRoute
+          - name: 'AddRoute ViewModal'
+            children:
+              - AddRouteViewModal
+      - name: 'MachineDetails'
+        children:
+          - MachineDetails
+          - name: 'MachineDetailsTop View'
+            children:
+              - MachineDetailsTopView
+      - name: 'SlipDetails'
+        children:
+          - SlipDetails
+          - name: 'SlipDetails View'
+            children:
+              - ModalSheet
+              - Machine
+          - SlipDetailsCell
+          - name: 'SlipDetailBottom Buttons'
+            children:
+              - SlipDetailBottomButtons
+      - name: 'SlipsList'
+        children:
+          - SlipsList
+          - name: 'Common'
+            children:
+              - CommonFunctions
+          - name: 'Completed Slips'
+            children:
+              - CompletedSlips
+              - CompletedItems
+          - name: 'Pending Slips'
+            children:
+              - PendingSlips
+              - PendingItems
+          - name: 'Slip View'
+            children:
+              - Slip
+      - name: 'Reasons'
+        children:
+          - SelectMachineReason
+          - SelectSlipReason
+          - SelectReasonItem
+
+  - name: 'Site Inventory'
+    description: 'Site inventory app to maintain inventory patrs data for both counter and auditor.'
+    children:
+      - name: 'Add Inventory'
+        children:
+          - AddInventory
+      - name: 'Bin List'
+        children:
+          - BinList
+          - BinViewModal
+          - BinItem
+      - name: 'Bin Location'
+        children:
+          - CreateBinLocation
+          - BinLocationViewModal
+      - name: 'Cart'
+        children:
+          - Cart
+      - name: 'Common Components'
+        description: 'This folder contains all common components related Site inventory module'
+        children:
+          - CartItem
+          - CartList
+          - CountryRadioButton
+          - Header
+          - HeaderWithTruck
+          - QuantityChangeButtons
+          - QuantityChangeButtonsView
+      - name: 'Common methodes'
+        children:
+          - DatabaseQuery
+      - name: 'Part Details'
+        children:
+          - PartDetails
+      - name: 'Search inventory'
+        children:
+          - SearchInventory
+          - SearchInventoryItem
+      - name: 'Site id'
+        children:
+          - EnterSiteId
+          - SiteViewModal
+
+  - name: 'Common classes'
+    description: 'Reusable classes'
+    children:
+      - BottomWaterImage
+      - Loader
+      - Scanner
+
+  - name: 'Counter reading guide'
+    description: 'User can see counter reading guide.'
+    children:
+      - DocViewer
+      - PDFViewModal
+
+  - name: 'Navigation classes'
+    description: 'Application navigation flow.'
+    children:
+      - Navigation
+
+  - name: 'Networking'
+    description: 'Application web services and APIs.'
+    children:
+      - NetworkManager
+      - API
+      - InventoryApis
+
+  - name: 'Redux classes'
+    description: 'Redux architecture to manage application data and actions.'
+    children:
+      - name: 'Action creators'
+        children:
+          - InitialActionCreators
+          - LocationActionCreators
+          - LoginActionCreators
+          - SlipsListingActionCreators
+          - InventoryPartDetailsActionCreator
+      - name: 'Actions'
+        children:
+          - LocationActions
+          - LoginApiActions
+          - SlipsListAPIActions
+          - InventoryPartDetailActions
+      - name: 'Reducers'
+        children:
+          - LogInReducer
+          - RouterReducer
+          - NetworkReducer
+          - LocationsReducer
+          - SlipsReducer
+          - UserReducer
+          - PartDetailsReducer
+      - name: 'Root Reducer'
+        children:
+          - Store
+      - name: 'Store'
+        children:
+          - ConfigureStore
+
+  - name: 'Custom components'
+    description: 'Reusable custom components and sidemenu.'
+    children:
+      - FloatingLabelInput
+      - Drawer
+      - SafeAreaWrapper
+      - name: 'SideMenu View'
+        children:
+          - SideMenu
+          - SideMenuCell
+
+  - name: 'Utility classes'
+    description: 'Application utility class.'
+    children:
+      - CommonMethods
+      - FlurryAnalytics
+      - Network
+      - NetworkModal
+      - UINormalize
+      - DismissKeyboard
